@@ -1,0 +1,200 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+	\item\small{
+		{ #1 \vspace{-2pt}}
+	}
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+	\begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+	
+	%----------HEADING-----------------
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{\href{https://github.com/dipeshdulal}{\Large Dipesh Dulal}} &  \href{mailto:nilkantha.dipesh@gmail.com}{nilkantha.dipesh@gmail.com}\\
+		\href{https://github.com/dipeshdulal}{github.com/dipeshdulal} &  +977-9843435969 \\
+		\href{https://medium.com/@dipesh-dulal}{medium.com/@dipesh-dulal} & Kathmandu, Nepal \\
+	\end{tabular*}
+	\linebreak
+	
+	I am a software engineer, team lead, project manager interested in developing products and tools ranging from web, mobile, erp systems, real time apps to cloud based solutions. I am continuously expanding my horizon with new ideas from interesting engineers worldwide to build reliable, maintainable and performant products.
+	
+	%-----------SKILLS-----------------
+	\section{Skills}
+	\resumeItemListStart
+	\resumeItem
+	{Languages -- Go, JavaScript, Java, TypeScript, Python, Dart, PHP}
+	\resumeItem
+	{Libraries/Frameworks -- Gin, Next.JS, Remix, Flutter, Laravel, Tailwind CSS, React Native, React, Node.JS}
+	\resumeItem
+	{DevOps/IaC -- Mac, Linux, Ubuntu, Docker, Terraform, AWS, GCP, Github Actions}
+	\resumeItem
+	{Databases -- MySQL, PostgreSQL}
+	\resumeItemListEnd
+	
+	%-----------EDUCATION-----------------
+	\section{Education}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{Advanced College of Engineering and Management}{Lalitpur, Nepal}
+	{Bachelor's in Computer Engineering;  80.32\%}{2015 -- 2019}
+	\resumeSubHeadingListEnd
+	
+
+	
+	
+	%-----------EXPERIENCE-----------------
+	\section{Experience}
+	\resumeSubHeadingListStart
+	
+	\resumeSubheading
+	{wesionaryTEAM}{Tokyo Shibuya-Ku Shibuya 2-24-12}
+	{CTO}{June 2020 - Present}
+	\resumeItemListStart
+	\resumeItem
+	{Lead a team of software engineers to accomplish company goals for research and development of different POC's and projects alongside technology evidence gathering and documentation.}
+	\resumeItem
+	{Software development using Golang, React, Next.JS, Django, Flutter, React Native technologies.}
+	\resumeItem
+	{Containerization, Automation Pipeline creation for AWS, GCP, PlayStore, AppStore}
+	\resumeItem{Involved in technology planning, code quality checks, code reviews, team progress monitoring, developer experience improvement, architecture development and team collaboration for wesionaryTEAM}
+	\resumeItem{Actively take part in company management for formulating, discussing plans and policies of the company}
+	\resumeItemListEnd
+	
+	
+	\resumeSubheading
+	{Phoenix Solutions}{Maitidevi, Nepal}
+	{Full-Stack Developer}{Jan 2019 - May 2020}
+	\resumeItemListStart
+	\resumeItem{Full Stack Software Development using Spring Boot, Laravel, React, React Native Technologies}
+	\resumeItem{Maintaining in built systems in Angular, Spring Boot and added some features}
+	\resumeItem{Building form builder using Angular JIT and self made template engine}
+	\resumeItem{Research on ERP Systems and no code/low code approach to system design and development using Idempiere}
+	\resumeItem{Mobile application design and development.}
+	\resumeItem{Deployment of developed systems to in-premise server.}
+	\resumeItem{Containerize applications, Wrote scripts for deployment and research on continuous integration and continuous deployment using Jenkins}
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{Budhanilkantha Sanchar Griha}{Budhanilkantha, Nepal}
+	{Web Developer/Administrator}{Nov 2016 - Dec 2018}
+	\resumeItemListStart
+	\resumeItem{Create website bsgnews.com from planning, requirement definition, development, deployment to support.}
+	\resumeItem{Prepare Designs for social media posts, website and flex board's}
+	\resumeItemListEnd
+
+	
+	\resumeSubHeadingListEnd
+	
+	
+	%-----------PROJECTS-----------------
+	\section{Projects}
+	\resumeSubHeadingListStart
+	\resumeSubItem{SOUDAN}
+	{Mobile application for Consultancy Service -- Flutter, Python, Django, PostgreSQL}
+	\resumeSubItem{\href{https://health-journey.jp/}{Health Journey}}
+	{PHR Health Handbook Application -- Go, React, Flutter, MySQL}
+	\resumeSubItem{\href{https://www.glive-official.co.jp/}{GLIVE}}
+	{Live streaming platform for Golf Players. -- AntMedia (WebRTC, RTMP), React Native, Go, React, MySQL}
+	\resumeSubItem{\href{https://kol-tech.co.jp/}{KOL}}
+	{Product for influencer marketing in collaboration with e-commerce stores. -- React, NodeJS, PostgreSQL}
+	\resumeSubItem{SCM for Otech Traders}
+	{Supply Chain Management for Otech Traders -- Idempiere ERP, React Native, Expo, PostgreSQL}
+	\resumeSubItem{\href{https://play.google.com/store/apps/details?id=com.phoenix.tourism_ministry.appointment&hl=en_us}{Appointment Management System}}
+	{Daily Schedule Tracking for ministers -- React Native, Expo, Laravel}
+	\resumeSubItem{Municipal Planning System}
+	{Nepal Government G2G, G2C Integration. Development program management. -- Java (Spring Boot), JavaScript, Angular}
+	\resumeSubItem{\href{https://bsgnews.com}{bsgnews.com}}
+	{Local news portal -- PHP, Laravel, MySQL}
+	\resumeSubHeadingListEnd
+	
+	%
+	%--------PROGRAMMING SKILLS------------
+	%\section{Programming Skills}
+	%  \resumeSubHeadingListStart
+	%    \item{
+		%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
+		%      \hfill
+		%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+		%    }
+	%  \resumeSubHeadingListEnd
+	
+	
+	%-------------------------------------------
+\end{document}
