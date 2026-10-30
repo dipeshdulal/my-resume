@@ -63,7 +63,7 @@
 
 \newcommand{\resumeSubheading}[4]{
 	\vspace{-1pt}\item
-	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+	\begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
 		\textit{\small#3} & \textit{\small #4} \\
 	\end{tabular*}\vspace{-5pt}
@@ -72,6 +72,16 @@
 \newcommand{\resumeSubSubheading}[2]{
 	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
 		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+% Education heading with a fixed-width name column so the right column
+% (location / dates) always aligns to the same edge, even for long names.
+\newcommand{\resumeEduHeading}[4]{
+	\vspace{-1pt}\item
+	\begin{tabular*}{\linewidth}[t]{@{}p{0.80\linewidth}@{\extracolsep{\fill}}r@{}}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
 	\end{tabular*}\vspace{-5pt}
 }
 
@@ -122,10 +132,10 @@
 	%-----------EDUCATION-----------------
 	\section{Education}
 	\resumeSubHeadingListStart
-	\resumeSubheading
+	\resumeEduHeading
 	{ Phoenix College of Management, Lincoln University}{Kathmandu, Nepal}
 	{Master of Computer Science; GPA 3.94; Thesis: \textit{Serverless automated API development using LLM agents}}{2022 -- 2024}
-	\resumeSubheading
+	\resumeEduHeading
 	{Advanced College of Engineering and Management, IOE, TU}{Lalitpur, Nepal}
 	{Bachelor's in Computer Engineering;  80.32\%}{2015 -- 2019}
 	\resumeSubHeadingListEnd
