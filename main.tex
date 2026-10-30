@@ -11,7 +11,10 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+\usepackage{needspace}
+\ifdefined\pdfgentounicode
+	\input{glyphtounicode}
+\fi
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -38,7 +41,9 @@
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+\ifdefined\pdfgentounicode
+	\pdfgentounicode=1
+\fi
 
 %-------------------------
 % Custom commands
@@ -95,32 +100,35 @@
 	\end{tabular*}
 	\linebreak
 	
-	I am a software engineer, team lead, project manager interested in developing products and tools ranging from web, mobile, erp systems, real time apps, dapps to cloud solutions. I am continuously expanding my horizon with new ideas from interesting engineers worldwide to build reliable, maintainable and performant products.
+	Software engineer and engineering lead with 10 years of experience building web, mobile and cloud products --- from Japanese e-commerce platforms and ISO 27001 compliance systems to developer tooling. I lead teams end-to-end: architecture, delivery, code review and developer experience. Currently focused on Go services on AWS, type-safe TypeScript frontends and AI-assisted engineering workflows.
 	
 	%-----------SKILLS-----------------
 	\section{Skills}
 	\resumeItemListStart
 	\resumeItem
-	{Languages -- Go, JavaScript, Java, TypeScript, Python, Dart, PHP}
+	{Languages -- Go, TypeScript, JavaScript, Python, Dart, Java, PHP, SQL}
 	\resumeItem
-	{Libraries/Frameworks -- Gin, Next.JS, Flutter, Laravel, Tailwind CSS, React Native, React, Node.JS, ThreeJS}
+	{Backend -- Gin, GORM, uber-go/fx, templ, Node.js, Next.js, Django, Laravel, Spring Boot, GraphQL}
 	\resumeItem
-	{DevOps/IaC -- Mac, Linux, Ubuntu, Docker, Terraform, AWS, GCP, Github Actions}
+	{Frontend/Mobile -- React 19, TanStack, Tailwind, Radix/shadcn, TipTap, Flutter, React Native, Three.js}
 	\resumeItem
-	{Databases -- MySQL, PostgreSQL}
+	{Databases -- PostgreSQL, MySQL, Atlas migrations}
+	\resumeItem
+	{Cloud/DevOps -- AWS (Lambda, Fargate, Elastic Beanstalk, Cognito, S3, CloudFormation), GCP, Terraform, Pulumi, Docker, GitHub Actions, Cloudflare Workers, Tailscale}
+	\resumeItem
+	{Practices -- Multi-tenant architecture, RBAC and permissions, audit logging, Playwright end-to-end testing, Sentry, LLM integration (OpenAI, Llama, MCP)}
 	\resumeItemListEnd
 	
 	%-----------EDUCATION-----------------
 	\section{Education}
 	\resumeSubHeadingListStart
-	% \resumeSubheading
-	% {Phoneix College of Management, LUC}{Kathmandu, Nepal}
-	% {Master of Computer Science; Ongoing}{2022}
+	\resumeSubheading
+	{ Phoenix College of Management, Lincoln University}{Kathmandu, Nepal}
+	{Master of Computer Science; GPA 3.94; Thesis: \textit{Serverless automated API development using LLM agents}}{2022 -- 2024}
 	\resumeSubheading
 	{Advanced College of Engineering and Management, IOE, TU}{Lalitpur, Nepal}
 	{Bachelor's in Computer Engineering;  80.32\%}{2015 -- 2019}
 	\resumeSubHeadingListEnd
-	
 
 	
 	
@@ -129,20 +137,44 @@
 	\resumeSubHeadingListStart
 	
 	\resumeSubheading
-	{wesionaryTEAM}{Tokyo Shibuya-Ku Shibuya 2-24-12}
-	{CTO}{June 2020 - Present}
+	{wesionaryTEAM}{Tokyo, Japan}
+	{CTO}{Apr 2021 - Present}
 	\resumeItemListStart
 	\resumeItem
-	{Lead a team of software engineers to accomplish company goals for research and development of different POC's and projects alongside technology evidence gathering and documentation.}
+	{Lead a 28-engineer technical org at a 34-person company (peak 60), delivering 10+ client products across commerce, real-time chat, compliance and access control.}
 	\resumeItem
-	{Software development using Golang, React, Next.JS, Django, Flutter, React Native technologies.}
+	{Architect across 24 repositories: Go services on AWS (80+ Lambdas, 7 Elastic Beanstalk environments, Aurora, 70+ queues) and React 19 / TanStack monorepos.}
 	\resumeItem
-	{Containerization, Automation Pipeline creation for AWS, GCP, PlayStore, AppStore}
-	\resumeItem{Involved in technology planning, code quality checks, code reviews, team progress monitoring, developer experience improvement, architecture development and team collaboration for wesionaryTEAM}
-	\resumeItem{Actively take part in company management for formulating, discussing plans and policies of the company}
+	{Client portfolio: Cospa marketplace core (Rakuten, Tsuhan-Sozai, Shopify), Tsuhan-Sozai/Precocirico storefronts, Yomiuri real-time chat (Go, Flutter, React, AppSync/CDK), Carcamping (Stripe subscriptions, LINE login, maps), SOUDAN, an ISO 27001 platform and EES biometric access control.}
+	\resumeItem
+	{Ship payment integrations and processor migrations across products: ZEUS and DGFT for Tsuhan-Sozai, Stripe subscriptions for Carcamping, plus refunds, cancellations and fallback paths.}
+	\resumeItem
+	{Design permission, approval and audit systems for regulated workflows: granular permissions, staged and proxy approvals, re-approval triggers and immutable audit trails.}
+	\resumeItem
+	{Own security and incident response across the org: policy and severity model, RCA process (120 documented incidents), trusted proxies, CVE and supply-chain response, audit-log conformance.}
+	\resumeItem
+	{Run R\&D and prototyping: evaluate new stacks and build POCs for LLM/AI features, MCP tooling and agent-driven code review, turning findings into production architecture.}
+	\resumeItem
+	{Run production for the largest account (8,900+ accounts, ~8M requests/month, 115 req/s peak, 108ms p95); cut dev AWS spend 61\% (~\$345/month) and set a \$2.4k to \$1.2k/month production target.}
+	\resumeItem
+	{Hire and mentor: interviewed 100+ candidates and hired around 10; review 2,200+ PRs since 2022 and mentor engineers across teams on architecture and design.}
+	\resumeItemListEnd
+
+	\needspace{6\baselineskip}
+	\resumeSubheading
+	{wesionaryTEAM}{Tokyo, Japan}
+	{Senior Software Engineer}{June 2020 - Apr 2021}
+	\resumeItemListStart
+	\resumeItem
+	{Built and shipped full-stack features with Go, React/Next.js, Flutter and React Native across client projects spanning commerce, health and media.}
+	\resumeItem
+	{Delivered marketplace and master-data integrations across Rakuten, Tsuhan-Sozai and Shopify, covering orders, multi-warehouse inventory, carrier tariffs and Google Sheets sync.}
+	\resumeItem
+	{Containerized services and built deployment pipelines for AWS, GCP, Play Store and App Store; researched and documented new technologies through POCs.}
 	\resumeItemListEnd
 	
 	
+	\needspace{6\baselineskip}
 	\resumeSubheading
 	{Phoenix Solutions}{Maitidevi, Nepal}
 	{Full-Stack Developer}{Jan 2019 - May 2020}
@@ -168,38 +200,34 @@
 	\resumeSubHeadingListEnd
 	
 	
-	%-----------PROJECTS-----------------
-	\section{Projects}
+	%-----------SELECTED TECHNICAL WORK-----------------
+	\section{Selected Technical Work}
 	\resumeSubHeadingListStart
-	\resumeSubItem{\href{https://metapylon.io}{MetaPylon Studio}}
-	{Flexible sticker customization system -- ThreeJS, Web3, Next.JS, NodeJS, MySQL}
-	\resumeSubItem{\href{https://play.google.com/store/apps/details?id=com.ito_technologies.soudan&hl=en&gl=US&pli=1}{SOUDAN}}
-	{Mobile application for Consultancy Service -- Flutter, Python, Django, PostgreSQL}
-	\resumeSubItem{\href{https://health-journey.jp/}{Health Journey}}
-	{PHR Health Handbook Application -- Go, React, Flutter, MySQL}
-	\resumeSubItem{\href{https://www.glive-official.co.jp/}{GLIVE}}
-	{Live streaming platform for Golf Players. -- AntMedia (WebRTC, RTMP), React Native, Go, React, MySQL}
-	\resumeSubItem{\href{https://kol-tech.co.jp/}{KOL}}
-	{Product for influencer marketing in collaboration with e-commerce stores. -- React, NodeJS, PostgreSQL}
-	\resumeSubItem{SCM for Otech Traders}
-	{Supply Chain Management for Otech Traders -- Idempiere ERP, React Native, Expo, PostgreSQL}
-	\resumeSubItem{\href{https://play.google.com/store/apps/details?id=com.phoenix.tourism_ministry.appointment&hl=en_us}{Appointment Management System}}
-	{Daily Schedule Tracking for ministers -- React Native, Expo, Laravel}
-	\resumeSubItem{Municipal Planning System}
-	{Nepal Government G2G, G2C Integration. Development program management. -- Java (Spring Boot), JavaScript, Angular}
+	\resumeSubItem{Order Allocation Engine --- Cospa Creation}
+	{Rules-based engine that decides which warehouse, vendor and carrier fulfils each order: FIFO across good and expected stock, row-locked transactions for concurrent orders, deallocation and reallocation, plus direct-sales and work-request paths, run as asynchronous Lambda workers --- Go, PostgreSQL, AWS}
+	\resumeSubItem{Device Fleet Management --- Entry Exit Management System}
+	{Command queue for biometric terminals: batched fan-out of face and palm templates, OTA-safe S3 archiving (Parquet for Athena, JSONL for restore), and a verification model that re-reads templates from the device because acknowledgements lie. Built a push simulator to reproduce protocol races --- Go, PostgreSQL, Next.js 15}
+	\resumeSubItem{ISO 27001 Compliance Platform}
+	{Multi-tenant ISMS platform for a Japanese certification body: granular permission model, staged and proxy approvals, re-approval rules, immutable audit trail, certification registers and EN/JA report catalogue --- 176k lines of Go, 133 migrations, 96 screens, 283 test files --- Go, React 19, TanStack, PostgreSQL, AWS}
+	\resumeSubItem{Multi-Marketplace Commerce Core}
+	{Rebuilt and migrated a legacy PHP core system to Go/AWS with a 15-minute cutover and full backward compatibility, then shipped on zero-downtime rolling deployments: orders, inventory and master-data sync across Rakuten, Tsuhan-Sozai and Shopify, a sheet catalogue, diff-file compares and multi-warehouse tariffs --- 87 Lambdas, 7 Elastic Beanstalk environments --- Go, templ, TypeScript, AWS}
 	\resumeSubHeadingListEnd
-	
-	%
-	%--------PROGRAMMING SKILLS------------
-	%\section{Programming Skills}
-	%  \resumeSubHeadingListStart
-	%    \item{
-		%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
-		%      \hfill
-		%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
-		%    }
-	%  \resumeSubHeadingListEnd
-	
+
+	\vspace{-2pt}
+	{\small \textbf{Earlier projects:} MetaPylon Studio (Three.js/Web3, ExpMap projection for 3D sticker placement), Health Journey (Go/React PHR), GLIVE (WebRTC golf streaming), KOL (influencer marketing), SCM for Otech Traders (iDempiere ERP), Appointment Management (React Native/Laravel), Municipal Planning (Spring Boot/Angular, Nepal Government).}
+
+	%-----------OPEN SOURCE-----------------
+	\section{Open Source \& Hardware}
+	\resumeItemListStart
+	\resumeItem
+	{\href{https://github.com/dipeshdulal/gothalo}{Gothalo} -- self-hosted mobile remote for coding agents: a Go bridge and Flutter app with live terminal, push notifications and Tailscale-only networking; 400+ commits.}
+	\resumeItem
+	{\href{https://github.com/dipeshdulal/clean-gin}{clean-gin} -- Go clean-architecture template (Gin, uber-go/fx, GORM) used as a reference by other teams; 500+ GitHub stars.}
+	\resumeItem
+	{\href{https://github.com/dipeshdulal/hwcx-usb-display}{HWCX USB Display Driver} -- reverse-engineered a proprietary USB HID protocol and wrote a Linux display driver.}
+	\resumeItem
+	{\href{https://github.com/dipeshdulal/darkflash-dn360d-led-driver}{Darkflash DN360D LED Driver} -- reverse-engineered the AIO cooler's LED controller protocol and built a Linux driver.}
+	\resumeItemListEnd
 	
 	%-------------------------------------------
 \end{document}
